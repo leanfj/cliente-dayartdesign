@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css?family=Allura|Josefin+Sans:300,400");
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .logo img {
+    width: 35px;
+    height: 50px;
+    margin-right: 20px; }
+  .logo h1 {
+    font-weight: 300; }
+
+.menu nav ul {
+  display: flex;
+  flex-wrap: wrap; }
+  .menu nav ul li {
+    list-style: none;
+    margin-top: 20px;
+    margin-left: 40px;
+    text-transform: uppercase;
+    font-size: 1vw;
+    color: #000; }
+    @media (max-width: 1000px) {
+      .menu nav ul li {
+        font-size: 10px; } }
+    @media (min-width: 1500px) {
+      .menu nav ul li {
+        font-size: 15px; } }
+    .menu nav ul li a {
+      text-decoration: none;
+      color: #000; }
+
+.hero {
+  font-family: "Josefin Sans", sans-serif;
+  margin-top: 260px; }
+  .hero h2 {
+    font-family: "Allura", cursive;
+    font-size: 70px;
+    font-weight: 300; }
+  .hero h3 {
+    font-size: 55px;
+    font-weight: 400;
+    margin-top: 30px; }
+  .hero p {
+    font-size: 25px;
+    font-weight: 400;
+    margin-top: 60px;
+    margin-left: 50px;
+    position: relative; }
+    .hero p:before {
+      content: "";
+      width: 40px;
+      height: 4px;
+      position: absolute;
+      top: 50%;
+      left: -50px;
+      background-color: #dcab2b;
+      transform: translateY(-50%); }
+
+header {
+  background-image: url("../img/Mimo_Caixa bala princesa.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh; }
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  font-family: "Josefin Sans", sans-serif; }
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0; }
+
+body {
+  font-size: 15px; }
+
+.container {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto; }

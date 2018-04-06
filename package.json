@@ -1,0 +1,14 @@
+{
+  "name": "dayartdesign",
+  "version": "1.0.0",
+  "description": "Site para cliente Day Art Design",
+  "main": "index.html",
+  "repository": "https://github.com/leanfj/cliente-dayartdesign.git",
+  "author": "leanfj <leanfj@hotmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.0"
+  }
+}

@@ -1,0 +1,41 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add browserSync sass --dev
+
+PATH: 
+  C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\leanf\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\composer;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\Program Files (x86)\Yarn\bin;C:\Program Files\nodejs;C:\Ruby25-x64\bin;C:\wamp64\bin\php\php7.0.10;C:\Ruby24-x64\bin;C:\Users\leanf\AppData\Local\Microsoft\WindowsApps;C:\Users\leanf\AppData\Local\atom\bin;C:\Program Files\Microsoft VS Code\bin;C:\Users\leanf\AppData\Roaming\Composer\vendor\bin;C:\Users\leanf\AppData\Local\Microsoft\WindowsApps;C:\Users\leanf\AppData\Local\Yarn\bin;C:\Users\leanf\AppData\Roaming\npm
+
+Yarn version: 
+  1.5.1
+
+Node version: 
+  8.9.4
+
+Platform: 
+  win32 x64
+
+npm manifest: 
+  {
+    "name": "dayartdesign",
+    "version": "1.0.0",
+    "description": "Site para cliente Day Art Design",
+    "main": "index.html",
+    "repository": "https://github.com/leanfj/cliente-dayartdesign.git",
+    "author": "leanfj <leanfj@hotmail.com>",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: Couldn't find package "browserSync" on the "npm" registry.
+      at new MessageError (C:\Program Files (x86)\Yarn\lib\cli.js:186:110)
+      at NpmResolver.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:51625:15)
+      at Generator.next (<anonymous>)
+      at step (C:\Program Files (x86)\Yarn\lib\cli.js:98:30)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:109:13
+      at <anonymous>
+      at process._tickCallback (internal/process/next_tick.js:188:7)
