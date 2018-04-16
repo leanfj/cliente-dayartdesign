@@ -12,14 +12,14 @@ gulp.task('serve', ['sass'], function () {
         },
     });
 
-    gulp.watch("sass/**/*.sass", ['sass']);
+    gulp.watch("./sass/**/*.sass", ['sass']);
     gulp.watch("./*.html").on('change', browserSync.reload);
 });
 
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function () {
-    return gulp.src("sass/**/*.sass")
-        .pipe(sass())
+    return gulp.src("./sass/**/*.sass")
+        .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest("./css"))
         .pipe(browserSync.stream());
 });
