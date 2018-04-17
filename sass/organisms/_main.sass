@@ -1,3 +1,75 @@
+#produtos
+  margin-top: 60px
+  h3
+    text-align: center
+    font-family: $allura
+    +font-size(50px)
+    font-weight: 400
+    color: $dourado
+    margin-bottom: 30px
+  .exemplo-produtos
+    hr
+      width: 70%
+      margin: 40px auto
+      border: 1px solid $dourado
+      &:last-child
+        margin: 40px auto 0 auto
+    .box-produto-left
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+      img
+        height: 295px
+      .descricao-produto
+        display: flex
+        flex-direction: column
+        padding: 0 30px
+        max-width: 600px       
+        +font-size(12px)
+        h4
+          +font-size(20px)
+        p
+          margin-top: 10px
+          color: #909090
+        ul
+          list-style: none
+          li
+            line-height: 150%
+            span
+              color: #909090
+        a
+          align-self: center
+      
+    .box-produto-right
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+      margin-bottom: 40px
+      img
+        // width: 495px
+        height: 295px
+        order: 2
+      .descricao-produto
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        padding: 0 30px
+        max-width: 600px
+        +font-size(12px)
+        h4
+          margin-bottom: 10px
+          +font-size(20px)
+        p
+          margin-bottom: 10px
+          color: #909090
+        ul
+          list-style: none
+          li
+            line-height: 150%
+            span
+              color: #909090
+        a
+          align-self: center
 #para-contato
   height: 300px
 .para-contato
@@ -11,17 +83,26 @@
     font-weight: 300
     +font-size(50px)
     color: $dourado
-  a
-    text-decoration: none
-    color: #000000
-    font-family: $josefin
+.galeria
+  display: flex
+  flex-direction: column
+  align-items: center
+  h3
+    font-family: $allura
+    +font-size(50px)
     font-weight: 400
-    text-transform: uppercase
-    +font-size(10px)
-    border: 1px solid $dourado
-    padding: 20px 100px
-    margin-top: 20px
-    transition: all .2s
-    &:hover
-      color: #ffffff
-      background-color: $dourado
+    color: $dourado
+  .setor-galeria
+    display: flex
+    flex-direction: column
+    align-items: center
+    h4
+      +font-size(20px)
+      margin: 20px
+    .galeria-fotos
+      display: flex
+      justify-content: space-around
+      flex-wrap: wrap
+      img
+        margin-bottom: 20px
+

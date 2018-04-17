@@ -1,11 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Allura|Josefin+Sans:300,400");
 * {
   padding: 0;
-  margin: 0;
-  border: 0; }
+  margin: 0; }
 
 body {
-  font-size: 15px; }
+  font-family: "Josefin Sans", sans-serif; }
 
 .container {
   width: 100%;
@@ -13,7 +12,7 @@ body {
   margin: 0 auto; }
 
 header {
-  background-image: url("../img/Mimo_Caixa bala princesa.jpg");
+  background-image: url("../img/Mimo-Caixa-bala-princesa.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -23,6 +22,7 @@ header {
   position: fixed;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   padding: 20px 0;
   width: 100%;
   z-index: 5;
@@ -30,8 +30,83 @@ header {
   transition: .2s all; }
 
 .bg-menu {
-  background-color: #d9dcdee6;
+  background-color: #dededed1;
   padding: 10px 0; }
+
+#produtos {
+  margin-top: 60px; }
+  #produtos h3 {
+    text-align: center;
+    font-family: "Allura", cursive;
+    font-size: 50px;
+    font-size: 5rem;
+    font-weight: 400;
+    color: #dcab2b;
+    margin-bottom: 30px; }
+  #produtos .exemplo-produtos hr {
+    width: 70%;
+    margin: 40px auto;
+    border: 1px solid #dcab2b; }
+    #produtos .exemplo-produtos hr:last-child {
+      margin: 40px auto 0 auto; }
+  #produtos .exemplo-produtos .box-produto-left {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+    #produtos .exemplo-produtos .box-produto-left img {
+      height: 295px; }
+    #produtos .exemplo-produtos .box-produto-left .descricao-produto {
+      display: flex;
+      flex-direction: column;
+      padding: 0 30px;
+      max-width: 600px;
+      font-size: 12px;
+      font-size: 1.2rem; }
+      #produtos .exemplo-produtos .box-produto-left .descricao-produto h4 {
+        font-size: 20px;
+        font-size: 2rem; }
+      #produtos .exemplo-produtos .box-produto-left .descricao-produto p {
+        margin-top: 10px;
+        color: #909090; }
+      #produtos .exemplo-produtos .box-produto-left .descricao-produto ul {
+        list-style: none; }
+        #produtos .exemplo-produtos .box-produto-left .descricao-produto ul li {
+          line-height: 150%; }
+          #produtos .exemplo-produtos .box-produto-left .descricao-produto ul li span {
+            color: #909090; }
+      #produtos .exemplo-produtos .box-produto-left .descricao-produto a {
+        align-self: center; }
+  #produtos .exemplo-produtos .box-produto-right {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 40px; }
+    #produtos .exemplo-produtos .box-produto-right img {
+      height: 295px;
+      order: 2; }
+    #produtos .exemplo-produtos .box-produto-right .descricao-produto {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0 30px;
+      max-width: 600px;
+      font-size: 12px;
+      font-size: 1.2rem; }
+      #produtos .exemplo-produtos .box-produto-right .descricao-produto h4 {
+        margin-bottom: 10px;
+        font-size: 20px;
+        font-size: 2rem; }
+      #produtos .exemplo-produtos .box-produto-right .descricao-produto p {
+        margin-bottom: 10px;
+        color: #909090; }
+      #produtos .exemplo-produtos .box-produto-right .descricao-produto ul {
+        list-style: none; }
+        #produtos .exemplo-produtos .box-produto-right .descricao-produto ul li {
+          line-height: 150%; }
+          #produtos .exemplo-produtos .box-produto-right .descricao-produto ul li span {
+            color: #909090; }
+      #produtos .exemplo-produtos .box-produto-right .descricao-produto a {
+        align-self: center; }
 
 #para-contato {
   height: 300px; }
@@ -48,21 +123,31 @@ header {
     font-size: 50px;
     font-size: 5rem;
     color: #dcab2b; }
-  .para-contato a {
-    text-decoration: none;
-    color: #000000;
-    font-family: "Josefin Sans", sans-serif;
+
+.galeria {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .galeria h3 {
+    font-family: "Allura", cursive;
+    font-size: 50px;
+    font-size: 5rem;
     font-weight: 400;
-    text-transform: uppercase;
-    font-size: 10px;
-    font-size: 1rem;
-    border: 1px solid #dcab2b;
-    padding: 20px 100px;
-    margin-top: 20px;
-    transition: all .2s; }
-    .para-contato a:hover {
-      color: #ffffff;
-      background-color: #dcab2b; }
+    color: #dcab2b; }
+  .galeria .setor-galeria {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .galeria .setor-galeria h4 {
+      font-size: 20px;
+      font-size: 2rem;
+      margin: 20px; }
+    .galeria .setor-galeria .galeria-fotos {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap; }
+      .galeria .setor-galeria .galeria-fotos img {
+        margin-bottom: 20px; }
 
 .logo {
   display: flex;
@@ -122,3 +207,20 @@ header {
       left: -50px;
       background-color: #dcab2b;
       transform: translateY(-50%); }
+
+.btn-dourado {
+  display: inline-block;
+  text-decoration: none;
+  color: #000000;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-size: 1rem;
+  border: 1px solid #dcab2b;
+  padding: 20px 80px;
+  margin-top: 20px;
+  transition: all .2s; }
+  .btn-dourado:hover {
+    color: #ffffff;
+    background-color: #dcab2b; }
