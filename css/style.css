@@ -1,4 +1,69 @@
 @import url("https://fonts.googleapis.com/css?family=Allura|Josefin+Sans:300,400");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0; }
+
+body {
+  font-size: 15px; }
+
+.container {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto; }
+
+header {
+  background-image: url("../img/Mimo_Caixa bala princesa.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh; }
+
+.header-top {
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
+  width: 100%;
+  z-index: 5;
+  font-family: "Josefin Sans", sans-serif;
+  transition: .2s all; }
+
+.bg-menu {
+  background-color: #d9dcdee6;
+  padding: 10px 0; }
+
+#para-contato {
+  height: 300px; }
+
+.para-contato {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px; }
+  .para-contato h3 {
+    font-family: "Allura", cursive;
+    font-weight: 300;
+    font-size: 50px;
+    font-size: 5rem;
+    color: #dcab2b; }
+  .para-contato a {
+    text-decoration: none;
+    color: #000000;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-size: 1rem;
+    border: 1px solid #dcab2b;
+    padding: 20px 100px;
+    margin-top: 20px;
+    transition: all .2s; }
+    .para-contato a:hover {
+      color: #ffffff;
+      background-color: #dcab2b; }
+
 .logo {
   display: flex;
   justify-content: space-between;
@@ -32,7 +97,8 @@
 
 .hero {
   font-family: "Josefin Sans", sans-serif;
-  margin-top: 260px; }
+  position: relative;
+  top: 300px; }
   .hero h2 {
     font-family: "Allura", cursive;
     font-size: 70px;
@@ -56,38 +122,3 @@
       left: -50px;
       background-color: #dcab2b;
       transform: translateY(-50%); }
-
-header {
-  background-image: url("../img/Mimo_Caixa bala princesa.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  height: 100vh; }
-
-.header-top {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 20px;
-  font-family: "Josefin Sans", sans-serif; }
-
-#para-contato {
-  height: 300px; }
-
-.para-contato {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-content: center; }
-
-* {
-  padding: 0;
-  margin: 0;
-  border: 0; }
-
-body {
-  font-size: 15px; }
-
-.container {
-  width: 100%;
-  max-width: 1180px;
-  margin: 0 auto; }
