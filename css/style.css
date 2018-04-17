@@ -34,7 +34,7 @@ header {
   padding: 10px 0; }
 
 #produtos {
-  margin-top: 60px; }
+  padding-top: 65px; }
   #produtos h3 {
     text-align: center;
     font-family: "Allura", cursive;
@@ -43,18 +43,27 @@ header {
     font-weight: 400;
     color: #dcab2b;
     margin-bottom: 30px; }
-  #produtos .exemplo-produtos hr {
-    width: 70%;
-    margin: 40px auto;
-    border: 1px solid #dcab2b; }
-    #produtos .exemplo-produtos hr:last-child {
-      margin: 40px auto 0 auto; }
+    @media (max-width: 500px) {
+      #produtos h3 {
+        font-size: 30px;
+        font-size: 3rem; } }
   #produtos .exemplo-produtos .box-produto-left {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    margin-top: 40px; }
+    @media (max-width: 1105px) {
+      #produtos .exemplo-produtos .box-produto-left {
+        align-items: center;
+        flex-direction: column; } }
     #produtos .exemplo-produtos .box-produto-left img {
       height: 295px; }
+      @media (max-width: 1105px) {
+        #produtos .exemplo-produtos .box-produto-left img {
+          margin: 20px 0; } }
+      @media (max-width: 500px) {
+        #produtos .exemplo-produtos .box-produto-left img {
+          height: 200px; } }
     #produtos .exemplo-produtos .box-produto-left .descricao-produto {
       display: flex;
       flex-direction: column;
@@ -65,6 +74,10 @@ header {
       #produtos .exemplo-produtos .box-produto-left .descricao-produto h4 {
         font-size: 20px;
         font-size: 2rem; }
+        @media (max-width: 500px) {
+          #produtos .exemplo-produtos .box-produto-left .descricao-produto h4 {
+            font-size: 30px;
+            font-size: 3rem; } }
       #produtos .exemplo-produtos .box-produto-left .descricao-produto p {
         margin-top: 10px;
         color: #909090; }
@@ -80,10 +93,22 @@ header {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-top: 40px;
     margin-bottom: 40px; }
+    @media (max-width: 1105px) {
+      #produtos .exemplo-produtos .box-produto-right {
+        align-items: center;
+        flex-direction: column; } }
     #produtos .exemplo-produtos .box-produto-right img {
       height: 295px;
       order: 2; }
+      @media (max-width: 1105px) {
+        #produtos .exemplo-produtos .box-produto-right img {
+          margin: 20px 0;
+          order: 0; } }
+      @media (max-width: 500px) {
+        #produtos .exemplo-produtos .box-produto-right img {
+          height: 200px; } }
     #produtos .exemplo-produtos .box-produto-right .descricao-produto {
       display: flex;
       flex-direction: column;
@@ -96,6 +121,10 @@ header {
         margin-bottom: 10px;
         font-size: 20px;
         font-size: 2rem; }
+        @media (max-width: 500px) {
+          #produtos .exemplo-produtos .box-produto-right .descricao-produto h4 {
+            font-size: 30px;
+            font-size: 3rem; } }
       #produtos .exemplo-produtos .box-produto-right .descricao-produto p {
         margin-bottom: 10px;
         color: #909090; }
@@ -109,7 +138,8 @@ header {
         align-self: center; }
 
 #para-contato {
-  height: 300px; }
+  height: 300px;
+  text-align: center; }
 
 .para-contato {
   display: flex;
@@ -123,6 +153,13 @@ header {
     font-size: 50px;
     font-size: 5rem;
     color: #dcab2b; }
+    @media (max-width: 500px) {
+      .para-contato h3 {
+        font-size: 30px;
+        font-size: 3rem; } }
+
+#galeria {
+  padding-top: 65px; }
 
 .galeria {
   display: flex;
@@ -134,6 +171,10 @@ header {
     font-size: 5rem;
     font-weight: 400;
     color: #dcab2b; }
+    @media (max-width: 500px) {
+      .galeria h3 {
+        font-size: 30px;
+        font-size: 3rem; } }
   .galeria .setor-galeria {
     display: flex;
     flex-direction: column;
@@ -141,13 +182,26 @@ header {
     .galeria .setor-galeria h4 {
       font-size: 20px;
       font-size: 2rem;
-      margin: 20px; }
+      margin: 20px;
+      margin-top: 60px; }
+      @media (max-width: 500px) {
+        .galeria .setor-galeria h4 {
+          font-size: 18px;
+          font-size: 1.8rem; } }
     .galeria .setor-galeria .galeria-fotos {
       display: flex;
       justify-content: space-around;
-      flex-wrap: wrap; }
+      flex-wrap: wrap;
+      margin-bottom: 20px; }
       .galeria .setor-galeria .galeria-fotos img {
-        margin-bottom: 20px; }
+        margin-bottom: 20px;
+        margin-left: 20px;
+        height: 200px; }
+        .galeria .setor-galeria .galeria-fotos img:first-child {
+          margin-left: 0; }
+        @media (max-width: 621px) {
+          .galeria .setor-galeria .galeria-fotos img {
+            margin-left: 0; } }
 
 .logo {
   display: flex;
@@ -160,30 +214,42 @@ header {
   .logo h1 {
     font-weight: 300; }
 
-.menu nav ul {
-  display: flex;
-  flex-wrap: wrap; }
-  .menu nav ul li {
-    list-style: none;
-    margin-top: 20px;
-    margin-left: 40px;
-    text-transform: uppercase;
-    font-size: 1vw;
-    color: #000; }
-    @media (max-width: 1000px) {
-      .menu nav ul li {
-        font-size: 10px; } }
-    @media (min-width: 1500px) {
-      .menu nav ul li {
-        font-size: 15px; } }
-    .menu nav ul li a {
-      text-decoration: none;
+.menu {
+  padding: 0 10px;
+  transition: .2s all; }
+  .menu nav ul {
+    display: flex;
+    flex-wrap: wrap; }
+    @media (max-width: 700px) {
+      .menu nav ul {
+        justify-content: space-around; } }
+    .menu nav ul li {
+      list-style: none;
+      margin-top: 20px;
+      margin-left: 40px;
+      text-transform: uppercase;
+      font-size: 3vw;
       color: #000; }
+      @media (max-width: 400px) {
+        .menu nav ul li {
+          font-size: 12px; } }
+      @media (min-width: 500px) {
+        .menu nav ul li {
+          font-size: 15px; } }
+      .menu nav ul li:first-child {
+        margin-left: 0; }
+      .menu nav ul li a {
+        text-decoration: none;
+        color: #000; }
+
+.show-menu {
+  display: block; }
 
 .hero {
   font-family: "Josefin Sans", sans-serif;
   position: relative;
-  top: 300px; }
+  top: 300px;
+  padding-left: 20px; }
   .hero h2 {
     font-family: "Allura", cursive;
     font-size: 70px;
@@ -224,3 +290,8 @@ header {
   .btn-dourado:hover {
     color: #ffffff;
     background-color: #dcab2b; }
+
+.linha-dourada {
+  width: 70%;
+  margin: 40px auto 0 auto;
+  border: 1px solid #dcab2b; }
