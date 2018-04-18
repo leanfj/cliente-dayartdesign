@@ -203,6 +203,44 @@ header {
           .galeria .setor-galeria .galeria-fotos img {
             margin-left: 0; } }
 
+#sobre {
+  padding-top: 65px; }
+
+.sobre {
+  display: flex;
+  flex-wrap: wrap; }
+  @media (max-width: 1030px) {
+    .sobre {
+      flex-direction: column;
+      align-items: center; } }
+  .sobre img {
+    height: 350px;
+    padding: 0 20px; }
+    @media (max-width: 550px) {
+      .sobre img {
+        height: 200px; } }
+  .sobre .descricao-perfil {
+    max-width: 520px;
+    flex: 2; }
+    @media (max-width: 550px) {
+      .sobre .descricao-perfil {
+        max-width: 405px; } }
+    .sobre .descricao-perfil h3 {
+      font-family: "Allura", cursive;
+      font-size: 40px;
+      font-size: 4rem;
+      font-weight: 300;
+      color: #dcab2b; }
+    .sobre .descricao-perfil h4 {
+      font-size: 15px;
+      font-size: 1.5rem;
+      color: #909090; }
+    .sobre .descricao-perfil p {
+      font-size: 13px;
+      font-size: 1.3rem;
+      line-height: 120%;
+      margin-top: 10px; }
+
 .logo {
   display: flex;
   justify-content: space-between;
