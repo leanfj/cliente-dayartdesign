@@ -145,6 +145,7 @@
   padding-top: 65px
 .sobre
   display: flex
+  justify-content: space-around
   flex-wrap: wrap
   @media (max-width: 1030px)
     flex-direction: column
@@ -171,3 +172,57 @@
       +font-size(13px)
       line-height: 120%
       margin-top: 10px
+#contato
+  padding-top: 65px
+  .contato
+    display: flex
+    justify-content: space-between
+    .formulario
+      padding: 0 30px
+      h3
+        font-family: $allura
+        color: $dourado
+        font-weight: 300
+        +font-size(35px)
+      h4
+        +font-size(20px)
+        margin-top: 10px
+        margin-bottom: 30px
+      form
+        display: flex
+        flex-direction: column
+        input
+          margin-bottom: 20px
+
+#depoimentos
+  margin-top: 20px
+  .depoimentos
+    display: flex
+    flex-direction: column
+    text-align: center
+    .mensagens
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+      margin: 30px 10px
+      .depoimento
+        max-width: 360px
+        margin: 20px 0
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: space-between
+        +font-size(13px)
+        color: #909090
+        .img-container
+          border-radius: 50%
+          display: block
+          width: 80px
+          height: 80px
+          overflow: hidden
+          img
+            height: 100%
+            width: 100%
+        p
+          margin: 10px 0
+  

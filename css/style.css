@@ -208,6 +208,7 @@ header {
 
 .sobre {
   display: flex;
+  justify-content: space-around;
   flex-wrap: wrap; }
   @media (max-width: 1030px) {
     .sobre {
@@ -240,6 +241,81 @@ header {
       font-size: 1.3rem;
       line-height: 120%;
       margin-top: 10px; }
+
+#contato {
+  padding-top: 65px; }
+  #contato .contato {
+    display: flex;
+    justify-content: space-between; }
+    #contato .contato .formulario {
+      padding: 0 30px; }
+      #contato .contato .formulario h3 {
+        font-family: "Allura", cursive;
+        color: #dcab2b;
+        font-weight: 300;
+        font-size: 35px;
+        font-size: 3.5rem; }
+      #contato .contato .formulario h4 {
+        font-size: 20px;
+        font-size: 2rem;
+        margin-top: 10px;
+        margin-bottom: 30px; }
+      #contato .contato .formulario form {
+        display: flex;
+        flex-direction: column; }
+        #contato .contato .formulario form input {
+          margin-bottom: 20px; }
+
+#depoimentos {
+  margin-top: 20px; }
+  #depoimentos .depoimentos {
+    display: flex;
+    flex-direction: column;
+    text-align: center; }
+    #depoimentos .depoimentos .mensagens {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin: 30px 10px; }
+      #depoimentos .depoimentos .mensagens .depoimento {
+        max-width: 360px;
+        margin: 20px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 13px;
+        font-size: 1.3rem;
+        color: #909090; }
+        #depoimentos .depoimentos .mensagens .depoimento .img-container {
+          border-radius: 50%;
+          display: block;
+          width: 80px;
+          height: 80px;
+          overflow: hidden; }
+          #depoimentos .depoimentos .mensagens .depoimento .img-container img {
+            height: 100%;
+            width: 100%; }
+        #depoimentos .depoimentos .mensagens .depoimento p {
+          margin: 10px 0; }
+
+.direitos {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0 10px;
+  height: 100px;
+  color: #909090; }
+  .direitos .cliente p {
+    margin-top: 5px; }
+  .direitos .desenvolvedor p a {
+    color: #5f5c5c;
+    transition: .2s all; }
+    .direitos .desenvolvedor p a:hover {
+      background-color: #3c3636;
+      color: #fff;
+      padding: 5px 5px; }
 
 .logo {
   display: flex;
