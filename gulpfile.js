@@ -23,7 +23,7 @@ gulp.task('serve', ['sass'], function () {
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function () {
     return gulp.src("./sass/**/*.sass")
-        .pipe(sass().on('error', sass.logError))
+        .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
         .pipe(gulp.dest("./css"))
         .pipe(browserSync.stream());
 });
