@@ -9,8 +9,11 @@ gulp.task('serve', ['sass'], function () {
     browserSync.init({
         server: {
             baseDir: "./",
-            directory: false
+            directory: false,
         },
+        tunnel: true,
+        tunnel: "leanfjdev",
+        port: 8080
     });
 
     gulp.watch("./sass/**/*.sass", ['sass']);
