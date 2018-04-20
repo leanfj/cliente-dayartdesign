@@ -9,6 +9,7 @@
     margin-bottom: 30px
     @media (max-width: 500px)
       +font-size(30px)
+
   .exemplo-produtos
     .box-produto-left
       display: flex
@@ -33,7 +34,7 @@
         h4
           +font-size(20px)
           @media (max-width: 500px)
-            +font-size(30px)    
+            +font-size(26px)    
         p
           margin-top: 10px
           color: #909090
@@ -57,7 +58,6 @@
         align-items: center
         flex-direction: column
       img
-        // width: 495px
         height: 295px
         order: 2
         @media (max-width: 1105px)
@@ -68,15 +68,14 @@
       .descricao-produto
         display: flex
         flex-direction: column
-        align-items: flex-start
-        padding: 0 30px
+        padding: 0 15px
         max-width: 600px
         +font-size(12px)
         h4
           margin-bottom: 10px
           +font-size(20px)
           @media (max-width: 500px)
-            +font-size(30px)
+            +font-size(26px)
         p
           margin-bottom: 10px
           color: #909090
@@ -152,11 +151,12 @@
     align-items: center
   img
     height: 350px
-    padding: 0 20px
+    padding: 0 10px
     @media (max-width: 550px)
       height: 200px
   .descricao-perfil
     max-width: 520px
+    padding: 0 10px
     flex: 2
     @media (max-width: 550px)
       max-width: 405px   
@@ -176,9 +176,11 @@
   padding-top: 65px
   .contato
     display: flex
-    justify-content: space-between
+    justify-content: space-around
+    flex-wrap: wrap
     .formulario
-      padding: 0 30px
+      padding: 0 15px
+      max-width: 600px
       h3
         font-family: $allura
         color: $dourado
@@ -193,6 +195,11 @@
         flex-direction: column
         input
           margin-bottom: 20px
+  .local
+    max-width: 400px
+    padding: 0 15px
+    margin-top: 20px
+    
 
 #depoimentos
   margin-top: 20px

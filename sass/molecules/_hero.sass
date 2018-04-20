@@ -5,14 +5,22 @@
   padding-left: 20px
   h2
     font-family: $allura
-    font-size: 70px
+    +font-size(50px)
     font-weight: 300
+    @media (max-width: 320px)
+      +font-size(25px)
+    @media (max-width: 500px)
+      +font-size(27px)
   h3
-    font-size: 55px
+    +font-size(30px)
     font-weight: 400
     margin-top: 30px
+    @media (max-width: 320px)
+      +font-size(11px)
+    @media (max-width: 500px)
+      +font-size(17px)
   p
-    font-size: 25px
+    +font-size(16px)
     font-weight: 400
     margin-top: 60px
     margin-left: 50px
@@ -26,4 +34,8 @@
       left: -50px
       background-color: #dcab2b
       transform: translateY(-50%)
+    @media (max-width: 320px)
+      +font-size(12px)
+    @media (max-width: 500px)
+      +font-size(13px)
       
