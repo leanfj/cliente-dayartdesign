@@ -30,6 +30,7 @@ window.addEventListener('resize', function () {
 });
 
 
+
 toggleMenu.addEventListener('click', function (e) {
   if (menu.classList[1] == "hide-menu") {
     menu.classList.remove('hide-menu');
