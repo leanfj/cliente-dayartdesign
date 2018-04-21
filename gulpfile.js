@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var browserSync = require('browser-sync').create();
 var sass = require('gulp-sass');
 var tinify = require('gulp-tinify');
+var wait = require('gulp-wait')
 
 // Static Server + watching scss/html files
 gulp.task('serve', ['sass'], function () {
@@ -23,6 +24,7 @@ gulp.task('serve', ['sass'], function () {
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function () {
     return gulp.src("./sass/**/*.sass")
+        .pipe(wait(50))
         .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
         .pipe(gulp.dest("./css"))
         .pipe(browserSync.stream());

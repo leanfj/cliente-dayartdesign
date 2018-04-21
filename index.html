@@ -15,6 +15,7 @@
 			<div class="logo">
 				<img src="img/logo.png" alt="Logo">
 				<h1>Day Art Design</h1>
+				<span id="toggle-menu" class="toggle-none">&#9776;</span>
 			</div>
 			<div class="menu">
 				<nav>
@@ -32,10 +33,10 @@
 							<a href="#sobre">sobre</a>
 						</li>
 						<li>
-							<a href="#">contato</a>
+							<a href="#contato">contato</a>
 						</li>
 						<li>
-							<a href="#">depoimentos</a>
+							<a href="#depoimentos">depoimentos</a>
 						</li>
 					</ul>
 				</nav>
@@ -186,7 +187,7 @@
 						<h4>DEIXE SUA MENSAGEM</h4>
 						<form action="">
 							<input type="text" name="nome" placeholder="Nome">
-							<input type="email" name="email" id="email">
+							<input type="email" name="email" id="email" placeholder="E-mail">
 							<div class="select">
 								<label for="">Assunto</label>
 								<select>
@@ -196,8 +197,7 @@
 									<option value="3">Sou decoradora</option>
 								</select>
 							</div>
-							<label for="">Telefone</label>
-							<input type="tel">
+							<input type="tel" placeholder="Telefone/Celular">
 							<label for="">Deixe sua mensagem aqui</label>
 							<textarea name="" id="" cols="30" rows="10"></textarea>
 							<button type="submit" name="enviar" class="">Enviar</button>
