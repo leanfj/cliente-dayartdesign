@@ -13,6 +13,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^4.0.1",
     "gulp-tinify": "^1.0.2",
+    "gulp-uglify": "^3.0.0",
     "gulp-wait": "^0.0.2",
     "jquery": "^3.3.1",
     "slick-carousel": "^1.8.1"

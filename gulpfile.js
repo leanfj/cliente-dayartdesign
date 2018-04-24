@@ -5,9 +5,10 @@ var tinify = require('gulp-tinify');
 var wait = require('gulp-wait');
 var concat = require('gulp-concat');
 var rename = require("gulp-rename");
+var uglify = require('gulp-uglify');
 
 // Static Server + watching scss/html files
-gulp.task('serve', ['sass'], function () {
+gulp.task('serve', ['sass', 'concatjs'], function () {
 
     browserSync.init({
         server: {
@@ -18,7 +19,9 @@ gulp.task('serve', ['sass'], function () {
     });
 
     gulp.watch("./sass/**/*.sass", ['sass']);
+    gulp.watch("./js/*.js", ['concatjs']);
     gulp.watch("./*.html").on('change', browserSync.reload);
+    gulp.watch("./js/*.js").on('change', browserSync.reload);
 });
 
 // Compile sass into CSS & auto-inject into browsers
@@ -50,5 +53,10 @@ gulp.task('concatjs', function () {
         .pipe(gulp.dest('./js/'));
 });
 
+gulp.task('uglify', function (){
+        gulp.src('./js/scripts.min.js')
+        .pipe(uglify())
+        .pipe(gulp.dest('./js/'));
+});
 
 gulp.task('default', ['serve']);
