@@ -9,8 +9,12 @@
   "devDependencies": {
     "browser-sync": "^2.23.6",
     "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^1.2.2",
     "gulp-sass": "^4.0.1",
     "gulp-tinify": "^1.0.2",
-    "gulp-wait": "^0.0.2"
+    "gulp-wait": "^0.0.2",
+    "jquery": "^3.3.1",
+    "slick-carousel": "^1.8.1"
   }
 }

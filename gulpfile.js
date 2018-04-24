@@ -2,7 +2,9 @@ var gulp = require('gulp');
 var browserSync = require('browser-sync').create();
 var sass = require('gulp-sass');
 var tinify = require('gulp-tinify');
-var wait = require('gulp-wait')
+var wait = require('gulp-wait');
+var concat = require('gulp-concat');
+var rename = require("gulp-rename");
 
 // Static Server + watching scss/html files
 gulp.task('serve', ['sass'], function () {
@@ -11,10 +13,8 @@ gulp.task('serve', ['sass'], function () {
         server: {
             baseDir: "./",
             directory: false,
-        },
-        tunnel: true,
-        tunnel: "leanfjdev",
-        port: 8080
+        }
+
     });
 
     gulp.watch("./sass/**/*.sass", ['sass']);
@@ -36,5 +36,19 @@ gulp.task('tinify', function () {
         .pipe(tinify('b_wi1hUvhf7dZxFcK0vZT3AUTckgfbTi'))
         .pipe(gulp.dest('./img'));
 });
+
+//Concatenar Javascript
+var jquery = './node_modules/jquery/dist/jquery.js';
+var slick = './node_modules/slick-carousel/slick/slick.js';
+var mainJS = './js/main.js'
+
+gulp.task('concatjs', function () {
+    return gulp.src([jquery, slick, mainJS])
+        .pipe(concat('scripts.js'))
+        .pipe(gulp.dest('./js/'))
+        .pipe(rename('scripts.min.js'))
+        .pipe(gulp.dest('./js/'));
+});
+
 
 gulp.task('default', ['serve']);
