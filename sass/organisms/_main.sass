@@ -187,9 +187,17 @@
       +font-size(20px)
       margin-top: 10px
       margin-bottom: 30px
-    form
+    .contact-form
       display: flex
       flex-direction: column
+      #contact_results
+        text-align: center
+        .error
+          background-color: #fdd2d2
+          padding: 10px
+        .success
+          background-color: #b8ecb9
+          padding: 10px
       input
         margin-bottom: 20px
         padding: 10px 5px
@@ -368,19 +376,36 @@
             color: #000
             text-decoration: none
             cursor: pointer
+      .modal-corpo
+        max-width: 600px
+        margin: 10px auto
+        +font-size(12px)
+        p
+          line-height: 130%
+          text-align: left
+        ul
+          list-style: circle
+          margin-top: 10px
+          li
+            +font-size(12px)        
+            color: #000
+            text-transform: none
+            text-align: left
+            letter-spacing: inherit
+            margin-bottom: 5px
 
 .social-buttons
   display: none
   position: fixed
   top: 30%
-  left: 5px
+  left: 10px
   @media (max-width: 700px)
     display: none !important
   ul
     list-style: none
     li
       img
-        height: 30px
+        height: 45px
         margin-bottom: 10px
 
   

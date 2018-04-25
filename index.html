@@ -191,9 +191,10 @@
 					<div class="formulario">
 						<h3>Deseja um orçamento ou tirar dúvidas?</h3>
 						<h4>DEIXE SUA MENSAGEM</h4>
-						<form action="">
-							<input id="contanct_form" type="text" name="name" placeholder="Nome" required>
-							<input id="contanct_form" type="email" name="email" id="email" placeholder="E-mail" required>
+						<div class="contact-form" id="contanct_form">
+							<div id="contact_results"></div>
+							<input id="contanct_form" type="text" name="name" placeholder="Nome" required="required">
+							<input id="contanct_form" type="email" name="email" id="email" placeholder="E-mail" required="required">
 							<div class="select">
 								<label for="">Assunto</label>
 								<select name="subject">
@@ -205,9 +206,9 @@
 							</div>
 							<input type="tel" placeholder="Telefone/Celular" name="telefone">
 							<label for="">Deixe sua mensagem aqui</label>
-							<textarea id="contanct_form" name="" id="" cols="30" rows="10" required></textarea>
+							<textarea id="contanct_form" name="message" id="" cols="30" rows="10" required="required"></textarea>
 							<button id="submit_btn" type="submit" name="enviar" class="">Enviar</button>
-						</form>
+						</div>
 					</div>
 					<div class="local">
 						<div class="endereco">
@@ -294,7 +295,16 @@
 								<h2>Pagamento</h2>
 							</div>
 							<div class="modal-corpo">
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, quibusdam.</p>
+								<p>Formas de pagamento</p> 
+								<p>As formas de pagamento disponíveis são</p>
+								<ul>
+									<li>
+										Cartão de crédito, parcelado em até 3x sem juros com processamento pelo paypal.
+									</li>
+									<li>
+										Depósito bancário no banco itaú com desconto de até 10%
+									</li>
+								</ul>
 							</div>
 						</div>
 					</div>
@@ -305,7 +315,11 @@
 								<h2>Comprar</h2>
 							</div>
 							<div class="modal-corpo">
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, quibusdam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti maiores itaque deleniti eum ullam fugit dolore rerum quam illum illo, consequuntur maxime incidunt dolor, omnis necessitatibus repellendus amet porro quibusdam.</p>
+								<p>Ficamos felizes que gostado dos nossos produtos!</p> 
+								<p>Para fazer sua compra, envie-nos um e-mail para contato@dayartdesign.com.br ou preencha o formulário na página de contatos, e em sua mensagem descreva o que gostaria de adquirir</p>
+								<p>Nós retornaremos o mais rápido possível com sua cotação. Após fecharmos,
+								definiremos sua arte e enviaremos para aprovar, com tudo definido, iniciamos a produção e fazemos o envio dos itens.</p>
+								<p>Encomende com antecedência, para evitar qualquer contratempo. O prazo mínimo para produção é de 20 a 30 dias.</p>
 							</div>
 						</div>
 					</div>
@@ -316,7 +330,7 @@
 								<h2>Envio</h2>
 							</div>
 							<div class="modal-corpo">
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, quibusdam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti maiores itaque deleniti eum ullam fugit dolore rerum quam illum illo, consequuntur maxime incidunt dolor, omnis necessitatibus repellendus amet porro quibusdam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo vero eius neque saepe quibusdam non omnis nulla nemo eos velit laborum ea inventore, ipsa, a adipisci. Non nesciunt blanditiis deleniti!</p>
+								<p>Formas de Envio Trabalhamos com os correios, para fazer os envios nacionais e internacionais. Caso esteja no Rio de Janeiro	podemos enviar pelo nosso motoboy mediante taxa de entrega ou o cliente poderá retirar diretamente conosco.</p>
 							</div>
 						</div>
 					</div>
@@ -335,9 +349,9 @@
 			<hr>
 			<div class="social-buttons">
 				<ul>
-					<li><a href="https://web.facebook.com/dayartedesign/"><img src="img/facebook.png" alt=""></a></li>
-					<li><a href="https://www.instagram.com/dayartdesign/"><img src="img/instagram.png" alt=""></a></li>
-					<li><a href="https://www.elo7.com.br/dayartdesign/loja"><img src="img/elo7.png" alt=""></a></li>
+					<li><a href="https://web.facebook.com/dayartedesign/" target="_blank"><img src="img/facebook.png" alt=""></a></li>
+					<li><a href="https://www.instagram.com/dayartdesign/" target="_blank"><img src="img/instagram.png" alt=""></a></li>
+					<li><a href="https://www.elo7.com.br/dayartdesign/loja" target="_blank"><img src="img/elo7.png" alt=""></a></li>
 				</ul>
 			</div>
 			<section class="direitos">
@@ -353,6 +367,7 @@
 	</footer>
 	<div id="fb-root"></div>
 	<script src="./js/scripts.min.js"></script>
+	<script src="./js/contact.js"></script>
 </body>
 
 </html>

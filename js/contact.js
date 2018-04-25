@@ -1,51 +1,48 @@
 jQuery(document).ready(function ($) {
   $("#submit_btn").click(function () {
     var proceed = true;
-    //simple validation at client's end
-    //loop through each field and we simply change border color to red for invalid fields
-    $("#contact_form input[required], #contact_form textarea[required]").each(function () {
+
+    $("input[required], textarea[required]").each(function () {
       $(this).css('background-color', '');
-      if (!$.trim($(this).val())) { //if this field is empty
-        $(this).css('background-color', '#FFDEDE'); //change border color to #FFDEDE
-        proceed = false; //set do not proceed flag
+      if (!$.trim($(this).val())) { 
+        $(this).css('background-color', '#FFDEDE'); 
+        proceed = false; 
       }
-      //check invalid email
+      
       var email_reg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
       if ($(this).attr("type") == "email" && !email_reg.test($.trim($(this).val()))) {
-        $(this).css('background-color', '#FFDEDE'); //change border color to #FFDEDE
-        proceed = false; //set do not proceed flag
+        $(this).css('background-color', '#FFDEDE'); 
+        proceed = false; 
       }
     });
 
-    if (proceed) //everything looks good! proceed...
+    if (proceed) 
     {
-      //get input field values data to be sent to server
       post_data = {
         'user_name': $('input[name=name]').val(),
         'user_email': $('input[name=email]').val(),
         'subject': $('select[name=subject]').val(),
-        'date': $('input[name=telefone]').val(),
+        'tel': $('input[name=telefone]').val(),
         'msg': $('textarea[name=message]').val()
       };
 
-      //Ajax post data to server
-      $.post('../sendmail.php', post_data, function (response) {
-        if (response.type == 'error') { //load json data from server and output message
-          output = '<br><br><div class="error">' + response.text + '</div>';
-        } else {
-          output = '<br><br><div class="success">' + response.text + '</div>';
-          //reset values in all input fields
-          $("#contact_form input[required=true], #contact_form textarea[required=true]").val('');
-          $("#contact_form .form-group").slideUp(); //hide form after success
-        }
-        $("#contact_form #contact_results").hide().html(output).slideDown();
-      }, 'json');
+      $.ajax({
+        type: "POST",
+        url: 'sendmail.php',
+        data: post_data,
+        success: function (response) {
+          if (response == '0') { 
+            output = '<br><br><div class="error"> Erro ao envia mensagem </div>';
+          } else {
+            output = '<br><br><div class="success"> Sua mensagem foi enviada </div>';
+
+            $("input[name=name], input[name=email], input[name=telefone], textarea[name=message]").val('');
+          }
+          $("#contact_results").hide().html(output).slideDown(setTimeout(slideUp(), 3000));
+        },
+        dataType: 'text'
+      });
     }
   });
 
-  //reset previously set border colors and hide all message on .keyup()
-  $("#contact_form  input[required=true], #contact_form textarea[required=true]").keyup(function () {
-    $(this).css('background-color', '');
-    $("#result").slideUp();
-  });
 });
