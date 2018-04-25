@@ -14,12 +14,16 @@
         margin-left: 40px
         text-transform: uppercase
         +responsive-font(3vw, 12px, 15px)
-        color: #000
         &:first-child	
           margin-left: 0
         a
           text-decoration: none
           color: #000
+          letter-spacing: 1px
+          transition: .2s all
+          &:hover
+            color: #ffc801
+            text-shadow: 2px 2px 2px #000
         @media (max-width: 320px)
           margin-left: 13px    
 .show-menu

@@ -16,6 +16,14 @@ window.addEventListener('scroll', function (e) {
   }
 });
 
+window.addEventListener('scroll', function (e) {
+  if (window.scrollY > 500) {
+    $('.social-buttons').show('slow');
+  } else {
+    $('.social-buttons').hide('slow');    
+  }
+});
+
 
 // Esconde link menu
 
@@ -47,34 +55,114 @@ toggleMenu.addEventListener('click', function (e) {
     
     
   }
-})
+});
+
+
+// MODAL
+$(document).ready(function(){
+  $('#pagamento').click(function(){
+    $('.pagamento').show("slow");
+  })
+  $('.fecha').click(function(){
+    $('.pagamento').hide("slow")
+  });
+  $('#comprar').click(function(){
+    $('.comprar').show("slow");
+  })
+  $('.fecha').click(function(){
+    $('.comprar').hide("slow")
+  });
+  $('#envio').click(function(){
+    $('.envio').show("slow");
+  })
+  $('.fecha').click(function(){
+    $('.envio').hide("slow")
+  });
+
+  $(window).click(function (e) {
+    var target = $(e.target);
+
+    if (target.is('.modal')) {
+      target.hide("slow");
+    }
+  });
+
+});
+
+
+
+
+
+
+
 
 
 //SLICK INICIALIZAR
 
-  
+$(document).ready(function () {
 
-$('.mensagens').slick({
-  infinite: true,
-  speed: 300,
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 3000,
-  responsive: [
-    {
-      breakpoint: 1105,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
+  $('.galeria-fotos').slick({
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    responsive: [
+      {
+        breakpoint: 1105,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          arrows: false
+          
+        }
+      },
+      {
+        breakpoint: 700,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false
+          
+        }
       }
-    },
-    {
-      breakpoint: 700,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
+    ]
+  });
+
+  $('.mensagens').slick({
+    infinite: true,
+    speed: 300,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    responsive: [
+      {
+        breakpoint: 1105,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          arrows: false
+          
+        }
+      },
+      {
+        breakpoint: 700,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false
+        }
       }
-    }
-  ]
+    ]
+  });
 });
+
+//FACEBOOK
+
+(function (d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.12';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
