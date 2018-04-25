@@ -192,21 +192,21 @@
 						<h3>Deseja um orçamento ou tirar dúvidas?</h3>
 						<h4>DEIXE SUA MENSAGEM</h4>
 						<form action="">
-							<input type="text" name="nome" placeholder="Nome">
-							<input type="email" name="email" id="email" placeholder="E-mail">
+							<input id="contanct_form" type="text" name="name" placeholder="Nome" required>
+							<input id="contanct_form" type="email" name="email" id="email" placeholder="E-mail" required>
 							<div class="select">
 								<label for="">Assunto</label>
-								<select>
-									<option value="0">Orçamento</option>
-									<option value="1">Dúvidas</option>
-									<option value="2">Parceria</option>
-									<option value="3">Sou decoradora</option>
+								<select name="subject">
+									<option value="orcamento">Orçamento</option>
+									<option value="duvidas">Dúvidas</option>
+									<option value="parceria">Parceria</option>
+									<option value="decorador">Sou decoradora</option>
 								</select>
 							</div>
-							<input type="tel" placeholder="Telefone/Celular">
+							<input type="tel" placeholder="Telefone/Celular" name="telefone">
 							<label for="">Deixe sua mensagem aqui</label>
-							<textarea name="" id="" cols="30" rows="10"></textarea>
-							<button type="submit" name="enviar" class="">Enviar</button>
+							<textarea id="contanct_form" name="" id="" cols="30" rows="10" required></textarea>
+							<button id="submit_btn" type="submit" name="enviar" class="">Enviar</button>
 						</form>
 					</div>
 					<div class="local">
