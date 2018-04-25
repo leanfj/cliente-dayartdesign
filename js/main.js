@@ -4,7 +4,7 @@
  *
  */
 
-// muma bg menu
+// muda bg menu
 
 var menuTop = document.querySelector(".header-top");
 
@@ -43,8 +43,6 @@ window.addEventListener('resize', function () {
   
 });
 
-
-
 toggleMenu.addEventListener('click', function (e) {
   if (menu.classList[1] == "hide-menu") {
     menu.classList.remove('hide-menu');
@@ -57,26 +55,25 @@ toggleMenu.addEventListener('click', function (e) {
   }
 });
 
-
 // MODAL
 $(document).ready(function(){
   $('#pagamento').click(function(){
-    $('.pagamento').show("slow");
+    $('.pagamento').show("fast");
   })
   $('.fecha').click(function(){
-    $('.pagamento').hide("slow")
+    $('.pagamento').hide("fast")
   });
   $('#comprar').click(function(){
-    $('.comprar').show("slow");
+    $('.comprar').show("fast");
   })
   $('.fecha').click(function(){
-    $('.comprar').hide("slow")
+    $('.comprar').hide("fast")
   });
   $('#envio').click(function(){
-    $('.envio').show("slow");
+    $('.envio').show("fast");
   })
   $('.fecha').click(function(){
-    $('.envio').hide("slow")
+    $('.envio').hide("fast")
   });
 
   $(window).click(function (e) {
@@ -88,14 +85,6 @@ $(document).ready(function(){
   });
 
 });
-
-
-
-
-
-
-
-
 
 //SLICK INICIALIZAR
 
@@ -128,6 +117,7 @@ $(document).ready(function () {
     ]
   });
 
+  
   $('.mensagens').slick({
     infinite: true,
     speed: 300,
