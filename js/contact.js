@@ -38,7 +38,8 @@ jQuery(document).ready(function ($) {
 
             $("input[name=name], input[name=email], input[name=telefone], textarea[name=message]").val('');
           }
-          $("#contact_results").hide().html(output).slideDown(setTimeout(slideUp(), 3000));
+          $("#contact_results").hide().html(output).slideDown();
+          setTimeout(function () { $("#contact_results").slideUp(); }, 3000)
         },
         dataType: 'text'
       });
