@@ -4,6 +4,20 @@
  *
  */
 
+$(document).ready(function () {
+  $('a[href^="#"]').on('click', function (e) {
+    e.preventDefault();
+
+    var target = this.hash;
+    var $target = $(target);
+
+    $('html, body').animate({
+      'scrollTop': $target.offset().top - 30
+    }, 800);
+  });
+});
+
+
 // muda bg menu
 
 var menuTop = document.querySelector(".header-top");
