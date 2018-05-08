@@ -1,8 +1,6 @@
 RewriteEngine on
 RewriteCond %{HTTP_HOST} ^dayartdesign.com.br [NC]
 RewriteRule ^(.*)$ https://www.dayartdesign.com.br/$1 [L,R=301]
-RewriteCond %{HTTP_HOST} ^www.dayartdesign.com.br [NC]
-RewriteRule ^(.*)$ https://www.dayartdesign.com.br/$1 [L,R=301]
 
 ErrorDocument 404 /erros/naoencontrado.html
 ErrorDocument 500 /erros/errointerno.html
