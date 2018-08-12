@@ -1,0 +1,43 @@
+.menu
+  padding: 0 10px
+  transition: .2s all
+  overflow: hidden
+  nav
+    ul
+      display: flex
+      flex-wrap: wrap
+      @media (max-width: 700px)
+        justify-content: space-around
+      li
+        list-style: none
+        margin-top: 20px
+        margin-left: 40px
+        text-transform: uppercase
+        +responsive-font(3vw, 12px, 15px)
+        &:first-child	
+          margin-left: 0
+        a
+          text-decoration: none
+          color: #000
+          letter-spacing: 1px
+          position: relative
+          &:before
+            transition: all 0.2s
+            content: ""
+            position: absolute
+            bottom: -5px
+            display: block
+            height: 2px
+            width: 100%
+            transform: scaleX(0)
+            background-color: #ffc801
+          &:hover:before
+            transform: scaleX(1)
+        @media (max-width: 320px)
+          margin-left: 13px    
+.show-menu
+  height: 80px
+.hide-menu
+  height: 0
+
+

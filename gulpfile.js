@@ -12,51 +12,51 @@ gulp.task('serve', ['sass', 'concatjs'], function () {
 
     browserSync.init({
         server: {
-            baseDir: "./",
+            baseDir: "./dist",
             directory: false,
         }
 
     });
 
-    gulp.watch("./sass/**/*.sass", ['sass']);
-    gulp.watch("./js/*.js", ['concatjs']);
-    gulp.watch("./*.html").on('change', browserSync.reload);
-    gulp.watch("./js/*.js").on('change', browserSync.reload);
+    gulp.watch("./dev/sass/**/*.sass", ['sass']);
+    gulp.watch("./dev/js/*.js", ['concatjs']);
+    gulp.watch("./dist/*.html").on('change', browserSync.reload);
+    gulp.watch("./dev/js/*.js").on('change', browserSync.reload);
 });
 
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function () {
-    return gulp.src("./sass/**/*.sass")
+    return gulp.src("./dev/sass/**/*.sass")
         .pipe(wait(50))
         .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
-        .pipe(gulp.dest("./css"))
+        .pipe(gulp.dest("./dist/css"))
         .pipe(browserSync.stream());
 });
 
 //minificar imagens
 gulp.task('tinify', function () {
-    gulp.src('./mini-img/**/*')
+    gulp.src('./dev/mini-img/**/*')
         .pipe(tinify('b_wi1hUvhf7dZxFcK0vZT3AUTckgfbTi'))
-        .pipe(gulp.dest('./img'));
+        .pipe(gulp.dest('./dist/img'));
 });
 
 //Concatenar Javascript
 var jquery = './node_modules/jquery/dist/jquery.js';
 var slick = './node_modules/slick-carousel/slick/slick.js';
-var mainJS = './js/main.js'
+var mainJS = './dev/js/main.js'
 
 gulp.task('concatjs', function () {
     return gulp.src([jquery, slick, mainJS])
-        .pipe(concat('scripts.js'))
-        .pipe(gulp.dest('./js/'))
+        .pipe(concat('./scripts.js'))
+        .pipe(gulp.dest('./dev/js/'))
         .pipe(rename('scripts.min.js'))
-        .pipe(gulp.dest('./js/'));
+        .pipe(gulp.dest('./dist/js/'));
 });
 
 gulp.task('uglify', function (){
-        gulp.src('./js/scripts.min.js')
+        gulp.src('./dist/js/scripts.min.js')
         .pipe(uglify())
-        .pipe(gulp.dest('./js/'));
+        .pipe(gulp.dest('./dist/js/'));
 });
 
 gulp.task('default', ['serve']);
