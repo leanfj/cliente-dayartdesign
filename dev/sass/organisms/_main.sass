@@ -13,14 +13,14 @@
   .exemplo-produtos
     .box-produto-left
       display: flex
-      justify-content: space-between
+      justify-content: space-evenly
       flex-wrap: wrap
       margin-top: 40px      
       @media (max-width: 1105px)
         align-items: center
         flex-direction: column
       img
-        height: 295px
+        height: 400px
         @media (max-width: 1105px)
           margin: 20px 0
         @media (max-width: 500px)
@@ -28,11 +28,13 @@
       .descricao-produto
         display: flex
         flex-direction: column
+        justify-content: center
         padding: 0 30px
         max-width: 600px       
         +font-size(12px)
         h4
           +font-size(20px)
+          text-align: center
           @media (max-width: 500px)
             +font-size(25px)    
         p
@@ -49,7 +51,7 @@
       
     .box-produto-right
       display: flex
-      justify-content: space-between
+      justify-content: space-evenly
       flex-wrap: wrap
       margin-top: 40px
       margin-bottom: 40px
@@ -58,7 +60,7 @@
         align-items: center
         flex-direction: column
       img
-        height: 295px
+        height: 400px
         order: 2
         @media (max-width: 1105px)
           margin: 20px 0
@@ -68,12 +70,14 @@
       .descricao-produto
         display: flex
         flex-direction: column
+        justify-content: center
         padding: 0 30px
         max-width: 600px
         +font-size(12px)
         h4
           margin-bottom: 10px
           +font-size(20px)
+          text-align: center
           @media (max-width: 500px)
             +font-size(25px)
         p
